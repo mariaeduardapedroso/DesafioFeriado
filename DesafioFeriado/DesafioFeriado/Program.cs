@@ -34,7 +34,7 @@ class MetodoParaDescobrirSeDiaEFeriado
             Console.WriteLine(DataAdquiridaString + " NÃO É FERIADO BORA TRABALHAR");
             return;
         }
-        Console.WriteLine(DataAdquiridaString + " DATA ILEGIVEL");
+        Console.WriteLine(DataAdquiridaString + " É UMA DATA ILEGIVEL");
     }
 
     private static void GracinhaParaMostrarOResultado()
