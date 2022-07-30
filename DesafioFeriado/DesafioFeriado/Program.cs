@@ -8,8 +8,10 @@ class MetodoParaDescobrirSeDiaEFeriado
         var TesteDataFormato = "[0-9]{2}[/][0-9]{2}[/][0-9]{4}";
         string DataAdquiridaString;
 
+        Console.WriteLine("----BEM VINDO AO GURU DAS DATAS ME DIGA UMA DATA E MOSTRAREI SE É FERIADO OU NÃO----");
         Console.WriteLine("Digite a data com dd/mm/aa");
         DataAdquiridaString = Console.ReadLine();
+        GracinhaParaMostrarOResultado();
 
         Match resultado1 = Regex.Match(DataAdquiridaString, TesteDataFormato);
 
@@ -19,22 +21,36 @@ class MetodoParaDescobrirSeDiaEFeriado
 
             if (DataAdquirida.CompararSeEFeriadoFixo())
             {
-                Console.WriteLine("É UM FERIADO FIXO");
+                Console.WriteLine(DataAdquiridaString + " É UM FERIADO FIXO BORA DESCANAR");
                 return;
             }
 
             if (DataAdquirida.CompararSeEFeriadoNaoFixo())
             {
-                Console.WriteLine("É FERIADO");
+                Console.WriteLine(DataAdquiridaString + " É FERIADO BORA DESCANSAR");
                 return;
             }
 
-            Console.WriteLine("NÃO É FERIADO");
+            Console.WriteLine(DataAdquiridaString + " NÃO É FERIADO BORA TRABALHAR");
             return;
         }
-        Console.WriteLine("DATA ILEGIVEL");
+        Console.WriteLine(DataAdquiridaString + " DATA ILEGIVEL");
+    }
+
+    private static void GracinhaParaMostrarOResultado()
+    {
+        Console.Clear();
+        Console.WriteLine("UM SEGUNDO ESTAMOS VERIFICANDO");
+        Thread.Sleep(1000);
+        Console.Clear();
+        Console.WriteLine("UM SEGUNDO ESTAMOS VERIFICANDO.");
+        Thread.Sleep(1000);
+        Console.Clear();
+        Console.WriteLine("UM SEGUNDO ESTAMOS VERIFICANDO..");
+        Thread.Sleep(1000);
+        Console.Clear();
+        Console.WriteLine("UM SEGUNDO ESTAMOS VERIFICANDO...");
+        Thread.Sleep(1000);
+        Console.Clear();
     }
 }
-
-
-
